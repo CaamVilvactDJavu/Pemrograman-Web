@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk</title>
+    <style>
+      body {
+        background-color: #181818;
+        color: #f5efe6;
+        font-family: "Courier New", Courier, monospace;
+      }
+      label {
+        font-size: large;
+      }
+      button {
+        position: absolute;
+        color: #181818;
+        font-family: "Courier New", Courier, monospace;
+        width: 150px;
+        height: 40px;
+
+        background: #eee3cb;
+        border-radius: 9px;
+      }
+      .card-body {
+        background-color: #181818;
+        border: solid;
+        width: auto;
+        height: auto;
+        top: auto;
+        align-items: center;
+        font-size: medium;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Produk</h1>
+    </div>
+    <div class="card">
+      <form action="detail_informasi.html" method="GET">
+        <div class="card-body">
+          <label for="form-produk">Nama Produk :</label>
+          <select name="id" id="form-produk">
+            <option value="0">JKT48 T-Shirt</option>
+            <option value="1">JKT48 Varsity</option>
+            <option value="2">JKT48 Hoodie</option></select
+          ><br />
+
+          <label for="form-ukuran">Ukuran Produk :</label>
+          <select name="weight" id="form-ukuran">
+            <option value="0">M</option>
+            <option value="1">L</option>
+            <option value="2">XL</option></select
+          ><br />
+        </div>
+        <br />
+        <div>
+          <button type="submit">Lihat Produk</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
