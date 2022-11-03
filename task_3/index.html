@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      main {
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 id="name" style="text-align: center">
+          Hai! <a>saya Ilham Fadhlur Rahman.</a>
+        </h1>
+        <h3 id="caption" style="text-align: center">
+          seorang mahasiswa dari Institut Teknologi Sumatera
+        </h3>
+        <center>
+          <button
+            style="border-radius: 10px; height: 40px; width: 250px"
+            ;
+            id="btn"
+          >
+            Ubah Warna Background - Case 3
+          </button>
+        </center>
+      </div>
+      <br />
+    </header>
+    <main>
+      <article class="tentang_saya">
+        <h2>Tentang Saya</h2>
+        <p id="description">
+          Nama saya Ilham Fadhlur Rahman. Mahasiswa dari Institut Teknologi
+          Sumatera, Program Studi Teknik Informatika '20. Saya lahir di
+          Bukittinggi, Sumatera Barat.
+        </p>
+      </article>
+      <br />
+      <article class="pengalaman_kerja">
+        <h2>Pengalaman Kerja</h2>
+        <div class="tabel">
+          <table border="3">
+            <thead>
+              <tr>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Posisi</th>
+                <th rowspan="2">Perusahaan</th>
+                <th colspan="2">Waktu</th>
+              </tr>
+              <tr>
+                <th>Mulai</th>
+                <th>Selesai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Machine Learning Engineer</td>
+                <td>Google LLC</td>
+                <td>2027</td>
+                <td>2032</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Machine Learning Engineer</td>
+                <td>PT. Lorem ipsum dolor sit amet</td>
+                <td>2033</td>
+                <td>2040</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="kontak_saya">
+        <h1>Kontak Saya</h1>
+        <div class="film">
+          <div class="form-group">
+            <label for="exampleInputEmail1"> Nama </label>
+            <input type="email" class="form-control" id="exampleInputEmail1" />
+          </div>
+          <div class="form-group">
+            <br />
+            Sudah menonton film saya?<br />
+            <input type="radio" name="film" value="sudah" /> Sudah <br />
+            <input type="radio" name="film" value="belum" /> Belum <br />
+            <br />
+            <input type="checkbox" value="ini" /> Sekarang <br />
+            <input type="checkbox" value="ini" /> Besok <br />
+            <input type="checkbox" value="ini" /> Lusa <br />
+            <button type="submit">Kirim</button>
+          </div>
+        </div>
+      </article>
+      <hr />
+      <div class="footer">
+        <div class="copyright">
+          <center>
+            <a id="copyright"> </a>
+            <p>&copy; 2022 c.a._.a.m.com</p>
+          </center>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Case 1 - Membuat teks kedalam id/class html tertentu
+      let changeText = document.getElementById("caption");
+      changeText.innerText =
+        "seorang mahasiswa dari Institut Teknologi Sumatera, Program Studi Teknik Informatika. - Case 1";
+
+      // Case 2 - Membuat element html kedalam id/class html tertentu
+      let newElement = document.createElement("a");
+      let newClass = document.querySelector("#copyright");
+      newClass.append(newElement);
+      newElement.innerHTML = "Copyright - Case 2";
+      console.log(newElement);
+
+      // Case 3 - Membuat element yang dinamis berdasarkan event handler tertentu, contoh: button di click berubah halaman
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+      document.querySelector("#btn").addEventListener("click", () => {
+        const colour = `rgb(${random(255)},${random(255)},${random(255)})`;
+        document.querySelector("body").style.background = colour;
+      });
+    </script>
+  </body>
+</html>
